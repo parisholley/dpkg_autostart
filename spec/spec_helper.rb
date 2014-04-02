@@ -6,10 +6,10 @@ require 'chefspec/berkshelf'
 
 # Prevent system calls from getting run on our local machine
 # lxc cookbook does this: https://github.com/hw-cookbooks/lxc/blob/master/recipes/default.rb#L47
-# TODO Figure out a better way to do this - couldn't get stubbing to work (see below)
+# TODO: Figure out a better way to do this - couldn't get stubbing to work (see below)
 module Kernel
   def system(cmd)
-    return true
+    true
   end
 end
 
@@ -27,6 +27,6 @@ RSpec.configure do |config|
     Etcd.stub(:client).and_return(etcd_stub)
     allow(etcd_stub).to receive(:get).and_raise(Net::HTTPFatalError.new('stub', 503))
     # Also stub system, because it's called in the lxc cookbook: https://github.com/hw-cookbooks/lxc/blob/9f113a34c0535c3e474b03fdd45af886c2132d3c/recipes/default.rb#L47
-    #allow(Kernel).to receive(:system).and_return(true)
+    # allow(Kernel).to receive(:system).and_return(true)
   end
 end
