@@ -58,7 +58,7 @@ end
 task unit: ['unit:rspec']
 
 desc 'Run all tests on Travis'
-task travis: ['style']
+task travis: ['style', 'unit']
 
 # Default
 task default: ['style', 'unit', 'integration:kitchen:all']
