@@ -72,7 +72,12 @@ GEM
       multi_json (>= 1.3.0)
     coderay (1.1.0)
     diff-lcs (1.2.5)
+    elecksee (1.0.20)
+      mixlib-shellout
+      net-ssh
     erubis (2.7.0)
+    etcd (0.2.3)
+      mixlib-log
     faraday (0.8.9)
       multipart-post (~> 1.2.0)
     fauxhai (2.1.0)
@@ -185,7 +190,7 @@ GEM
     rspec-expectations (2.14.5)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.6)
-    rubocop (0.19.0)
+    rubocop (0.20.0)
       json (>= 1.7.7, < 2)
       parser (~> 2.1.7)
       powerpack (~> 0.0.6)
@@ -237,10 +242,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  berkshelf
+  berkshelf (~> 2.0.14)
   chefspec (~> 3.4.0)
-  foodcritic (~> 3.0)
-  kitchen-vagrant (~> 0.13)
+  elecksee (~> 1.0.20)
+  etcd (~> 0.2.3)
+  foodcritic (~> 3.0.3)
+  kitchen-vagrant (~> 0.14)
   rake
-  rubocop (~> 0.18)
-  test-kitchen (~> 1.1)
+  rubocop (~> 0.20.0)
+  test-kitchen (~> 1.2.1)

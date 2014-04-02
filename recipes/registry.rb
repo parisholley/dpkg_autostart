@@ -8,7 +8,7 @@
 include_recipe 'deis::default'
 
 require 'etcd'
-ruby_block 'publish-registry-config' do
+ruby_block 'publish-registry-config' do # ~FC014
   block do
     client = Etcd.client(host: node.deis.public_ip, port: node.deis.etcd.port)
     client.set('/deis/registry/s3accessKey', node.deis.registry.s3.access_key)

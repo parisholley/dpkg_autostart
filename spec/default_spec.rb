@@ -5,7 +5,7 @@ describe 'deis::default' do
     ChefSpec::Runner.new.converge(described_recipe)
   end
 
-  it 'serverinclude apt::default' do
+  it 'includes apt::default' do
     expect(chef_run).to include_recipe 'apt::default'
   end
 

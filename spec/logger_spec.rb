@@ -5,7 +5,7 @@ describe 'deis::logger' do
     ChefSpec::Runner.new.converge(described_recipe)
   end
 
-  it 'serverinclude deis::default' do
+  it 'includes deis::default' do
     expect(chef_run).to include_recipe('deis::default')
   end
 

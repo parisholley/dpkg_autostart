@@ -5,6 +5,8 @@ gem 'berkshelf', '~> 2.0.14' # Needed for both test and integration
 
 group :test do
   gem 'chefspec', '~> 3.4.0'
+  gem 'elecksee', '~> 1.0.20'
+  gem 'etcd', '~> 0.2.3'
   gem 'foodcritic', '~> 3.0.3'
   gem 'rubocop', '~> 0.20.0'
 end
