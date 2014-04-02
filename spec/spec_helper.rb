@@ -14,6 +14,6 @@ RSpec.configure do |config|
     etcd = double
     require 'etcd'
     Etcd.stub(:client).and_return(etcd)
-    allow(etcd).to receive(:get).and_raise(Net::HTTPFatalError.new("stub",503))
+    allow(etcd).to receive(:get).and_raise(Net::HTTPFatalError.new('stub', 503))
   end
 end
