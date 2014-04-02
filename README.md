@@ -65,11 +65,14 @@ The proxy recipe will iterate over the `deis-formations` databag and configure N
 
 The destination for rsyslog clients is determined by a Chef search for recipe[deis::controller], and using the `ipaddress` attribute.
 
-# Testing
+# Contributing
 
-To test your change, run `bundle exec rake`.
+Contributions are welcome! Please open a pull request after fully testing your changes.
 
-It will test ruby style with [rubocop](https://github.com/bbatsov/rubocop), chef style with [foodcritic](http://acrmp.github.io/foodcritic/) and will test a complete integration with [test-kitchen](http://kitchen.ci/)
+This cookbook tests Ruby style with [rubocop](https://github.com/bbatsov/rubocop), Chef style with [foodcritic](http://acrmp.github.io/foodcritic/),
+unit tests with [ChefSpec](https://github.com/sethvargo/chefspec) and a full integration with [test-kitchen](http://kitchen.ci/).
+
+See [CONTRIBUTING](https://github.com/opdemand/deis-cookbook/blob/master/CONTRIBUTING.md) for more details.
 
 # License
 
