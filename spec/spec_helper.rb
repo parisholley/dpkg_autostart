@@ -11,9 +11,10 @@ RSpec.configure do |config|
   config.version = '12.04'
   config.before(:each) do
     stub_command('/opt/chef/embedded/bin/gem list macaddr | grep "(1.6.1)"').and_return(false)
-    etcd = double
+    # Stub the etcd client so it doesn't actually do any work
+    etcd_stub = double
     require 'etcd'
-    Etcd.stub(:client).and_return(etcd)
-    allow(etcd).to receive(:get).and_raise(Net::HTTPFatalError.new('stub', 503))
+    Etcd.stub(:client).and_return(etcd_stub)
+    allow(etcd_stub).to receive(:get).and_raise(Net::HTTPFatalError.new('stub', 503))
   end
 end
