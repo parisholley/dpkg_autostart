@@ -1,10 +1,6 @@
 require 'spec_helper'
 
 describe 'deis::nginx' do
-  before do
-    stub_command('/opt/chef/embedded/bin/gem list macaddr | grep "(1.6.1)"').and_return(false)
-  end
-
   let(:chef_run) do
     ChefSpec::Runner.new.converge(described_recipe)
   end

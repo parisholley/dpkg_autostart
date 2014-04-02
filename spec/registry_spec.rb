@@ -1,9 +1,6 @@
 require 'spec_helper'
 
 describe 'deis::registry' do
-  before do
-    stub_command('/opt/chef/embedded/bin/gem list macaddr | grep "(1.6.1)"').and_return(false)
-  end
   let(:chef_run) do
     ChefSpec::Runner.new.converge(described_recipe)
   end
@@ -17,7 +14,7 @@ describe 'deis::registry' do
   end
 
   it 'pulls registry_data image if missing' do
-    expect(chef_run).to pull_if_missing_docker_image(node.deis.registry_data.repository)
+    expect(chef_run).to pull_if_missing_docker_image(chef_run.node.deis.registry_data.repository)
   end
 
   it 'runs registry_data image' do
