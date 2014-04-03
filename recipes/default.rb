@@ -69,7 +69,7 @@ end
 
 sudo node.deis.username do
   user node.deis.username
-  nopasswd  true
+  nopasswd true
   commands ['/usr/bin/chef-client']
 end
 

@@ -41,7 +41,7 @@ formations.each do |f|
         next if nodename != node.name
 
         # determine build command, if one exists
-        if !build['procfile'].nil? && build['procfile'].key?(c_type)
+        if build['procfile'] && build['procfile'].key?(c_type)
           command = "start #{c_type}"
         else
           command = nil

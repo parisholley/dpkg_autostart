@@ -95,7 +95,7 @@ default.deis.builder.container = 'deis-builder'
 default.deis.builder.port = 2222
 # change nil to target directory to sync buildpacks from github
 default.deis.builder.packs.dir = nil # '/var/lib/deis/buildpacks'
-default.deis.builder.packs.defaults = {
+default.deis.builder.packs.defaults = { # rubocop:disable SpaceBeforeFirstArg
   'heroku-buildpack-java' => ['https://github.com/heroku/heroku-buildpack-java.git', 'master'],
   'heroku-buildpack-ruby' => ['https://github.com/heroku/heroku-buildpack-ruby.git', 'master'],
   'heroku-buildpack-python' => ['https://github.com/heroku/heroku-buildpack-python.git', 'master'],
