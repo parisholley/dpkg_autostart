@@ -44,4 +44,4 @@ To run rspec for a specific recipe:
 ## Running integration tests
 
 Test Kitchen test suites are defined in [.kitchen.yml](https://github.com/opdemand/deis-cookbook/blob/master/.kitchen.yml). Running `kitchen test` will cause Test Kitchen to spin up a test VM and attempt
-to provision a Deis controller. Post-run integration tests using [serverspec](http://serverspec.org/) are planned for a future release.
+to provision a Deis controller. After the Chef run completes, integration tests are run using [serverspec](http://serverspec.org/). These live in `test/integration/controller/serverspec` and ensure that services are running and listening on expected ports.
