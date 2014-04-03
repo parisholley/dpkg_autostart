@@ -9,6 +9,7 @@ end
 
 group :integration do
   gem 'berkshelf'
+  gem 'busser-serverspec', '~> 0.2.6'
   gem 'test-kitchen', '~> 1.1'
   gem 'kitchen-vagrant', '~> 0.13'
 end
