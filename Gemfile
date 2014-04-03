@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'berkshelf', '~> 2.0.14' # Needed for both test and integration
+
+group :test, :integration do
+  gem 'berkshelf', '~> 2.0.14'
+end
 
 group :test do
   gem 'chefspec', '~> 3.4.0'
