@@ -9,8 +9,8 @@ platforms:
   - name: ubuntu-12.04
 
 suites:
-  - name: default
+  - name: controller
     run_list:
       - recipe[deis::controller]
     attributes:
-    data_bags_path: "test/integration/default/data_bags"
+    data_bags_path: "test/integration/controller/data_bags"
