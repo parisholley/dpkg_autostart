@@ -12,6 +12,6 @@ depends          'sudo',      '~> 2.5'
 depends          'rsyslog',   '~> 1.12'
 
 # https://github.com/hw-cookbooks/dpkg_autostart/pull/8
-cookbook         'dpkg_autostart', '~> 0.1.10', git: 'https://github.com/parisholley/dpkg_autostart.git#patch-1'
+depends          'dpkg_autostart',   '~> 0.1.11'
 
 supports         'ubuntu'
